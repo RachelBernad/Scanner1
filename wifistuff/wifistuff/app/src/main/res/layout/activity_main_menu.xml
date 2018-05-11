@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.natal.wifi.MainMenuActivity">
+
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/wifi3"
+        android:text="Wifi Manager"
+        android:textSize="20sp"
+        android:onClick="WifiManager"
+        android:paddingBottom="150dp"
+        android:textColor="#df1a08"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/user"
+        android:paddingBottom="150dp"
+        android:textColor="#df1a08"
+        android:text="User Manager"
+        android:textSize="20sp"
+        android:onClick="UserManager"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>

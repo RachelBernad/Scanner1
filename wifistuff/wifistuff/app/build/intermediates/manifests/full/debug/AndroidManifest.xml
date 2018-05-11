@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.artemy.wifistuff"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Hacker"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.artemy.wifistuff.rachel.LaunchActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.artemy.wifistuff.rachel.infoActivity" />
+        <activity android:name="com.artemy.wifistuff.rachel.MainActivity" />
+        <activity android:name="com.artemy.wifistuff.ListActivity" />
+
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.USBC"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.USBD"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.Wifi_rec"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.LocationReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.artemy.wifistuff.artemy.FlightModeReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.VolumeReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.artemy.wifistuff.artemy.BluetoothReceiver" >
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.artemy.wifistuff.artemy.RebootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.artemy.wifistuff.SettingActivity" />
+        <activity android:name="com.artemy.wifistuff.WifiMenuActivity" />
+        <activity android:name="com.artemy.wifistuff.ListAllWifiesActivity" />
+        <activity android:name="com.artemy.wifistuff.EditWifiActivity" />
+        <activity android:name="com.artemy.wifistuff.AddWifiActivity" />
+        <activity android:name="com.artemy.wifistuff.MainMenuActivity" >
+        </activity>
+        <activity android:name="com.artemy.wifistuff.UserMenuActivity" />
+        <activity android:name="com.artemy.wifistuff.AddUserActivity" />
+        <activity android:name="com.artemy.wifistuff.EditUserActivity" />
+        <activity android:name="com.artemy.wifistuff.ListAllUsersActivity" />
+
+        <service
+            android:name="com.artemy.wifistuff.PushService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.artemy.wifistuff.PowerConnectReciever"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

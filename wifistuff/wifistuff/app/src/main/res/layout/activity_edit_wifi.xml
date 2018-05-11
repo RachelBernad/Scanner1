@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.natal.wifi.EditWifiActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Edit Wifi"
+        android:textSize="40sp"
+        android:textColor="#19348b"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/edit_text_name_of_the_wifi"
+        android:hint="name of the wifi" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/edit_text_wifi_pass"
+        android:hint="wifi password" />
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/edit_text_wifi_pwtype"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="wifi pwtype" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:id="@+id/edit_text_wifi_bssid"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:gravity="center"
+    android:hint="wifi bssid" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/edit_text_mongo_id"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="mongo id" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="46dp"
+            android:layout_toStartOf="@+id/button"
+            android:onClick="submitClick"
+            android:text="submit"
+            android:textAllCaps="false"
+            android:textSize="30dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="74dp"
+            android:onClick="finish_edit_wifi_activity"
+            android:text="back"
+            android:textAllCaps="false"
+            android:textSize="30dp"></Button>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

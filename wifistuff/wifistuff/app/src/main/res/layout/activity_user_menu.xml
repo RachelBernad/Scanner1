@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.natal.wifi.UserMenuActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="User manager"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="30sp"
+        android:textColor="#d8311fba"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:paddingBottom="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/list"
+        android:gravity="center"
+        android:onClick="show_all_users"
+        android:text="Show all"
+        android:textAllCaps="false"
+        android:textColor="#df1a08"
+        android:textSize="23sp" />
+    <Button
+        android:paddingBottom="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/plus"
+        android:gravity="center"
+        android:onClick="add_user"
+        android:text="Add User"
+        android:textAllCaps="false"
+        android:textColor="#df1c0a"
+        android:textSize="23sp" />
+
+
+    <Button
+        android:layout_width="140dp"
+        android:paddingBottom="110dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/return_icon"
+        android:gravity="center"
+        android:text="Return"
+        android:textAllCaps="false"
+        android:textColor="#df1c0a"
+        android:textSize="23sp"
+        android:onClick="exit_user_menu" />
+
+</LinearLayout>

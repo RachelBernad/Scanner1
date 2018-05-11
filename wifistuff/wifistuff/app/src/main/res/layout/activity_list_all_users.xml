@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.natal.wifi.ListAllUsersActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="All Users"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:text="Does user nicknamed :"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/user_nickname"
+            android:hint="insert nickname"
+            android:textSize="17dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:text="Exist?"
+            android:textSize="17dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Search"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:onClick="Search"
+        android:id="@+id/search_button"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="finish__list_all_users_activity"
+        android:text="back"
+        android:textAllCaps="false"
+        android:textSize="20dp">
+    </Button>
+
+    <ListView
+        android:id="@+id/list_view_all_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ListView>
+
+</LinearLayout>
